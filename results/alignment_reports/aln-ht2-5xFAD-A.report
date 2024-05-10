@@ -1,0 +1,17 @@
+aln-ht2-5xFAD-A.sam
+
+1000000 reads; of these:
+  1000000 (100.00%) were paired; of these:
+    76530 (7.65%) aligned concordantly 0 times
+    871928 (87.19%) aligned concordantly exactly 1 time
+    51542 (5.15%) aligned concordantly >1 times
+    ----
+    76530 pairs aligned concordantly 0 times; of these:
+      2534 (3.31%) aligned discordantly 1 time
+    ----
+    73996 pairs aligned 0 times concordantly or discordantly; of these:
+      147992 mates make up the pairs; of these:
+        81496 (55.07%) aligned 0 times
+        59672 (40.32%) aligned exactly 1 time
+        6824 (4.61%) aligned >1 times
+95.93% overall alignment rate

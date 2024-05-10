@@ -1,0 +1,17 @@
+aln-ht2-WT-A.sam
+
+1000000 reads; of these:
+  1000000 (100.00%) were paired; of these:
+    53965 (5.40%) aligned concordantly 0 times
+    886849 (88.68%) aligned concordantly exactly 1 time
+    59186 (5.92%) aligned concordantly >1 times
+    ----
+    53965 pairs aligned concordantly 0 times; of these:
+      1372 (2.54%) aligned discordantly 1 time
+    ----
+    52593 pairs aligned 0 times concordantly or discordantly; of these:
+      105186 mates make up the pairs; of these:
+        58353 (55.48%) aligned 0 times
+        42029 (39.96%) aligned exactly 1 time
+        4804 (4.57%) aligned >1 times
+97.08% overall alignment rate

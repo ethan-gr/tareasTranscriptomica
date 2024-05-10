@@ -1,0 +1,6 @@
+aln-bwt-E12-A.sam
+
+# reads processed: 387228
+# reads with at least one alignment: 258427 (66.74%)
+# reads that failed to align: 128801 (33.26%)
+Reported 258427 alignments

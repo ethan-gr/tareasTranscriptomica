@@ -1,0 +1,6 @@
+aln-bwt-WT-A
+
+# reads processed: 1000000
+# reads with at least one alignment: 653760 (65.38%)
+# reads that failed to align: 346240 (34.62%)
+Reported 653760 paired-end alignments

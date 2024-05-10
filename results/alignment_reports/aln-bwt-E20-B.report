@@ -1,0 +1,6 @@
+aln-bwt-E20-B.sam
+
+# reads processed: 403476
+# reads with at least one alignment: 295997 (73.36%)
+# reads that failed to align: 107479 (26.64%)
+Reported 295997 alignments

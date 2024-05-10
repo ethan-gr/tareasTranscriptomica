@@ -1,0 +1,6 @@
+aln-bwt-5xFAD-B
+
+# reads processed: 1000000
+# reads with at least one alignment: 641735 (64.17%)
+# reads that failed to align: 358265 (35.83%)
+Reported 641735 paired-end alignments
