@@ -13,11 +13,11 @@ import os
 import re
 
 # ==============================================================================
-for name in ["fc-RNAseq-bwt", "fc-RNAseq-ht2", "fc-microRNA"]:
-    outdir = f"results/{name}-pyDESeq2"
+for name in ["fc_RNAseq_bwt", "fc_RNAseq_ht2", "fc_microRNA"]:
+    outdir = f"results{name}-pyDESeq2"
 
     # Load counts
-    file = f"results/{name}.Rds"
+    file = f"results/counts/{name}.txt"
     if name == "fc-microRNA": sampleNames = re.compile(r"((E12|E20)\.[AB])")
     else: sampleNames = re.compile(r"((5xFAD|WT)[-\.][AB])")
 

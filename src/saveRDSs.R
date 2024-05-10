@@ -20,45 +20,43 @@ bfiles.microRNAs <- c("results/alignments/aln-bwt-E12-A.bam",
 
 
 # counts para los RNAseq hechos con Hisat2
-saveRDS(
-  file = "results/counts/fc-RNAseq-ht2.Rds",
-  object = featureCounts(
-    files=bfiles.RNAseq.ht2,
-    annot.ext="data/indexes/mm10-ensembl_99-genes.gtf",
-    isGTFAnnotationFile=TRUE, 
-    useMetaFeatures=TRUE, 
-    largestOverlap=TRUE, 
-    isPairedEnd=TRUE, 
-    requireBothEndsMapped=TRUE, 
-    nthreads=15
-  )
+fc.RNAseq.ht2 <- featureCounts(
+  files=bfiles.RNAseq.ht2,
+  annot.ext="data/indexes/mm10-ensembl_99-genes.gtf",
+  isGTFAnnotationFile=TRUE, 
+  useMetaFeatures=TRUE, 
+  largestOverlap=TRUE, 
+  isPairedEnd=TRUE, 
+  requireBothEndsMapped=TRUE, 
+  nthreads=15
 )
 
 # counts para los RNAseq hechos con Bowtie
-saveRDS(
-  file = "results/counts/fc-RNAseq-bwt.Rds",
-  object = featureCounts(
-    files=bfiles.RNAseq.bwt,
-    annot.ext="data/indexes/mm10-ensembl_99-genes.gtf",
-    isGTFAnnotationFile=TRUE, 
-    useMetaFeatures=TRUE, 
-    largestOverlap=TRUE, 
-    isPairedEnd=TRUE, 
-    requireBothEndsMapped=TRUE, 
-    nthreads=15
-  )
+fc.RNAseq.bwt <- featureCounts(
+  files=bfiles.RNAseq.bwt,
+  annot.ext="data/indexes/mm10-ensembl_99-genes.gtf",
+  isGTFAnnotationFile=TRUE, 
+  useMetaFeatures=TRUE, 
+  largestOverlap=TRUE, 
+  isPairedEnd=TRUE, 
+  requireBothEndsMapped=TRUE, 
+  nthreads=15
 )
 
 # counts para los microRNAs
-saveRDS(
-  file = "results/counts/fc-microRNAs.Rds",
-  object = featureCounts(
-    files=bfiles.microRNAs,
-    annot.ext="data/indexes/mm10-ensembl_99-genes.gtf",
-    isGTFAnnotationFile=TRUE, 
-    useMetaFeatures=TRUE, 
-    largestOverlap=TRUE,
-    requireBothEndsMapped=TRUE, 
-    nthreads=15
-  )
+fc.microRNAs <- featureCounts(
+  files=bfiles.microRNAs,
+  annot.ext="data/indexes/mm10-ensembl_99-genes.gtf",
+  isGTFAnnotationFile=TRUE, 
+  useMetaFeatures=TRUE, 
+  largestOverlap=TRUE,
+  requireBothEndsMapped=TRUE, 
+  nthreads=15
 )
+
+# counts para los RNAseq hechos con Hisat2
+saveRDS(fc.RNAseq.ht2, file="results/counts/fc-RNAseq-ht2.Rds")
+# counts para los RNAseq hechos con Bowtie
+saveRDS(fc.RNAseq.bwt, file="results/counts/fc-RNAseq-bwt.Rds")
+# counts para los microRNAs
+saveRDS(fc.microRNAs, file="results/counts/fc-microRNAs.Rds")
