@@ -14,18 +14,18 @@ import re
 
 # ==============================================================================
 for name in ["fc_RNAseq_bwt", "fc_RNAseq_ht2", "fc_microRNAs"]:
-    outdir = f"results/{name}-pyDESeq2"
+    outdir = f"results/{name}_pyDESeq2"
     os.makedirs(outdir)
 
     # Load counts
     file = f"results/counts/{name}.txt"
-    if name == "fc-microRNA": sampleNames = re.compile(r"((E12|E20)\.[AB])")
+    if name == "fc_microRNAs": sampleNames = re.compile(r"((E12|E20)\.[AB])")
     else: sampleNames = re.compile(r"((5xFAD|WT)[-\.][AB])")
 
     counts = pd.read_csv(file, sep='\t').rename(columns=lambda x: sample.group() if (sample := re.search(sampleNames, x)) else x).T
 
     # Metadata
-    if name == "fc-microRNA": 
+    if name == "fc_microRNAs": 
         metadata = pd.DataFrame.from_dict({"Condition": {sample: "E12" if "E12" in sample else "E20" for sample in counts.index}})
     else: 
         metadata = pd.DataFrame.from_dict({"Condition": {sample: "WT" if "WT" in sample else "5xFAD" for sample in counts.index}})
@@ -48,7 +48,7 @@ for name in ["fc_RNAseq_bwt", "fc_RNAseq_ht2", "fc_microRNAs"]:
     dds.deseq2()
 
     # Statistics (DEA)
-    if name == "fc-microRNA": stat_res = DeseqStats(dds, contrast = ("Condition", "E20", "E12"))
+    if name == "fc_microRNAs": stat_res = DeseqStats(dds, contrast = ("Condition", "E20", "E12"))
     else: stat_res = DeseqStats(dds, contrast = ("Condition", "5xFAD", "WT"))
     stat_res.summary()
 
