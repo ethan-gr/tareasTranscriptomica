@@ -65,7 +65,7 @@ for name in ["fc_RNAseq_bwt", "fc_RNAseq_ht2", "fc_microRNA"]:
     # ==============================================================================
 
     # Volcano plot
-    dds.layers["log1p"] = np.log1p(dds.layers["normed-counts"])
+    dds.layers["log1p"] = np.log1p(dds.layers["normed_counts"])
 
     dds_sigs = dds[:, sigs.index]
 
