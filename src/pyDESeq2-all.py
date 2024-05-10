@@ -13,7 +13,7 @@ import os
 import re
 
 # ==============================================================================
-for name in ["fc_RNAseq_bwt", "fc_RNAseq_ht2", "fc_microRNA"]:
+for name in ["fc_RNAseq_bwt", "fc_RNAseq_ht2", "fc_microRNAs"]:
     outdir = f"results/{name}-pyDESeq2"
     os.makedirs(outdir)
 
