@@ -12,7 +12,7 @@ output_dir <- paste("results/", name, "-edgeR", sep="")
 dir.create(output_dir)
 
 # Select the feature counts object
-fc <- readRDS(paste("results/", name, ".Rds", sep=""))
+fc <- readRDS(paste("results/counts/", name, ".Rds", sep=""))
 
 # Define the samples
 samples <- factor(c("E12", "E12", "E20", "E20"))
