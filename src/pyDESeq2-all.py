@@ -14,7 +14,8 @@ import re
 
 # ==============================================================================
 for name in ["fc_RNAseq_bwt", "fc_RNAseq_ht2", "fc_microRNA"]:
-    outdir = f"results{name}-pyDESeq2"
+    outdir = f"results/{name}-pyDESeq2"
+    os.makedirs(outdir)
 
     # Load counts
     file = f"results/counts/{name}.txt"
