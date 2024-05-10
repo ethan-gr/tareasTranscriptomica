@@ -3,7 +3,6 @@
 
 library(edgeR)
 library(pheatmap)
-library(optparse)
 
 # ==============================================================================
 
@@ -13,7 +12,7 @@ output_dir <- paste("results/", name, "-edgeR", sep="")
 dir.create(output_dir)
 
 # Select the feature counts object
-fc <- readRDS(paste("results/", name, sep=""))
+fc <- readRDS(paste("results/", name, ".Rds", sep=""))
 
 # Define the samples
 samples <- factor(c("m5xFAD", "WT", "m5xFAD", "WT"))

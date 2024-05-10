@@ -2,7 +2,6 @@
 # IMPORTS
 
 suppressMessages((library(DESeq2)))
-suppressMessages(library(optparse))
 suppressMessages(library(ggplot2))
 suppressMessages(library(pheatmap))
 suppressMessages(library(dplyr))
@@ -15,7 +14,7 @@ output_dir <- paste("results/", name, "-DESeq2", sep="")
 dir.create(output_dir)
 
 # Select the feature counts object
-fc <- readRDS(paste("results/", name, sep=""))
+fc <- readRDS(paste("results/", name, ".Rds", sep=""))
 
 samples <- factor(c("5xFAD","WT","5xFAD","WT"))
 
