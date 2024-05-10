@@ -14,7 +14,7 @@ output_dir <- paste("results/", name, "-DESeq2", sep="")
 dir.create(output_dir)
 
 # Select the feature counts object
-fc <- readRDS(paste("results/", name, ".Rds", sep=""))
+fc <- readRDS(paste("results/counts/", name, ".Rds", sep=""))
 
 samples <- factor(c("5xFAD","WT","5xFAD","WT"))
 
